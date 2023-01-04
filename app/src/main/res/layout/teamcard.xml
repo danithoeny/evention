@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txtTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Team 1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/txtPlayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTeamName"
+                    android:layout_alignStart="@id/txtTeamName"
+                    android:layout_marginLeft="16dp"
+                    android:text="player"
+                    android:textColor="@color/white"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtHeadDiff"
+                    android:text="Diff."
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_toLeftOf="@id/txtHeadPts"
+                    android:layout_marginRight="6dp"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/txtHeadPts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pts."
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"></TextView>
+
+                <TextView
+                    android:id="@+id/txtPts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeadPts"
+                    android:layout_alignEnd="@id/txtHeadPts"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txtDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/txtHeadDiff"
+                    android:layout_below="@id/txtHeadDiff"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtHeadAgst"
+                    android:text="Agst."
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_toLeftOf="@id/txtHeadDiff"
+                    android:layout_marginRight="6dp"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/txtAgst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeadPts"
+                    android:layout_alignEnd="@id/txtHeadAgst"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:id="@+id/txtHeadFor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="For"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@id/txtHeadAgst"
+                    android:layout_marginRight="6dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txtFor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtHeadFor"
+                    android:layout_alignEnd="@id/txtHeadFor"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"></TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

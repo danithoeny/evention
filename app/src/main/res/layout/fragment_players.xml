@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentPlayers"
+    android:padding="10dp">
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:src="@drawable/ic_add"
+        android:tint="@color/primary"
+        />
+
+    <EditText
+        android:id="@+id/edtPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnAdd"
+        android:layout_toRightOf="@id/btnAdd"
+        android:ems="10"
+        android:hint="player name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:layout_marginLeft="4dp"
+       />
+
+    <TextView
+        android:id="@+id/txtComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAdd"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:text="Available Players:"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlayerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="130dp"
+        android:layout_below="@id/txtComment"
+        android:scrollbars="vertical"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvPlayerList"
+        android:layout_marginTop="-130dp"
+        android:id="@+id/rgTeamMode"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbSinglePlayers"
+            android:text="single players"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbEditTeam"
+            android:text="set teams"
+            android:layout_marginLeft="8dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbRndTeams"
+            android:text="random teams"
+            android:layout_marginLeft="8dp"
+            />
+    </RadioGroup>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/btnSinglePlayer"
+        android:src="@drawable/ic_singleplayer"
+        android:scaleType="fitCenter"
+        android:background="#0000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rvPlayerList"
+        android:layout_marginTop="-70dp"
+        android:tint="@color/primary"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtNumTeams"
+            android:hint="players per team"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnEdtTeam"
+            android:src="@drawable/ic_team"
+            android:scaleType="fitCenter"
+            android:background="#0000"
+            android:layout_centerHorizontal="true"
+            android:tint="@color/primary"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnRndTeam"
+            android:src="@drawable/ic_rndteam"
+            android:scaleType="fitCenter"
+            android:background="#0000"
+            android:layout_toRightOf="@id/edtNumTeams"
+            android:layout_marginLeft="8dp"
+            android:tint="@color/primary"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/eventViewFragment">
+
+    <fragment
+        android:id="@+id/eventViewFragment"
+        android:name="com.leoneer.evention.FragmentEventView"
+        android:label="fragment_event_view"
+        tools:layout="@layout/fragment_event_view" >
+        <action
+            android:id="@+id/action_eventViewFragment_to_fragmentNewEvent"
+            app:destination="@id/fragmentNewEvent" />
+        <action
+            android:id="@+id/action_eventViewFragment_to_fragmentEvent"
+            app:destination="@id/fragmentEvent" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewEvent"
+        android:name="com.leoneer.evention.FragmentNewEvent"
+        android:label="fragment_new_event"
+        tools:layout="@layout/fragment_new_event" >
+        <action
+            android:id="@+id/action_fragmentNewEvent_to_fragmentPlayers"
+            app:destination="@id/fragmentPlayers" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPlayers"
+        android:name="com.leoneer.evention.FragmentPlayers"
+        android:label="fragment_players"
+        tools:layout="@layout/fragment_players" >
+        <action
+            android:id="@+id/action_fragmentPlayers_to_eventViewFragment"
+            app:destination="@id/eventViewFragment" />
+        <action
+            android:id="@+id/action_fragmentPlayers_to_fragmentSetTeam"
+            app:destination="@id/fragmentSetTeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSetTeam"
+        android:name="com.leoneer.evention.FragmentSetTeam"
+        android:label="fragment_set_team"
+        tools:layout="@layout/fragment_set_team" >
+        <action
+            android:id="@+id/action_fragmentSetTeam_to_eventViewFragment"
+            app:destination="@id/eventViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEvent"
+        android:name="com.leoneer.evention.FragmentEvent"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
+</navigation>

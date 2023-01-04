@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentSetTeam"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:text="Choose Players for Team 1:"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtComment"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvActPlayerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:scrollbars="vertical"
+            />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/btnNextTeam"
+            android:src="@drawable/ic_team"
+            android:scaleType="fitCenter"
+            android:background="#0000"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rvActPlayerList"
+            android:layout_marginTop="-70dp"
+            android:tint="@color/primary"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

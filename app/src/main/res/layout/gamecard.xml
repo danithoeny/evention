@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameCard"
+                android:background="@color/primary"
+                android:paddingTop="8dp"
+                android:paddingBottom="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/txtTeamName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Team 1"
+                    android:layout_toLeftOf="@id/txtVs"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/txtVs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="vs."
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/txtTeamName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtVs"
+                    android:layout_marginLeft="8dp"
+                    android:text="Team 2"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"></TextView>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtTeam1Score"
+                    android:layout_below="@id/txtTeamName1"
+                    android:layout_toLeftOf="@id/txtdoubledott"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="-11dp"
+                    android:textSize="14dp"
+                    android:hint=""
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:inputType="number"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtTeam1Score"
+                    android:layout_toLeftOf="@+id/txtdoubledott"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignTop="@id/txtVs"
+                    android:layout_marginTop="20dp"
+                    android:textSize="14sp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/txtdoubledott"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtVs"
+                    android:layout_centerHorizontal="true"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"></TextView>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtTeam2Score"
+                    android:layout_toRightOf="@+id/txtdoubledott"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@id/txtTeamName1"
+                    android:layout_marginTop="-9dp"
+                    android:textSize="14dp"
+                    android:hint=""
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    android:visibility="invisible"
+                    />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTeam2Score"
+                        android:layout_alignLeft="@id/edtTeam2Score"
+                        android:layout_marginLeft="5dp"
+                        android:layout_alignTop="@id/txtVs"
+                        android:layout_marginTop="20dp"
+                        android:textSize="14dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        />
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btnEdit"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:background="#0000"
+                    android:scaleType="fitCenter"
+                    />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btnCheck"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_check"
+                    android:background="#0000"
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

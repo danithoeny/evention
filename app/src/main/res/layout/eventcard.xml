@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/relLay"
+    tools:ignore="InvalidId">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    android:id="@+id/eventCard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/txtEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="eventname"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@id/txtEventName"
+            android:background="#0000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_delete"
+            android:layout_toRightOf="@id/eventImage"
+            android:layout_marginLeft="-35dp"
+            android:tint="@color/primary" />
+
+        <TextView
+            android:id="@+id/txtEventMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEventName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="mode"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/points"
+            android:layout_below="@id/txtEventMode"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtWinPts"
+                android:text="win pts.:"
+                android:layout_marginLeft="15dp"
+                android:visibility="invisible">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDrawPts"
+                android:text="draw pts.:"
+                android:layout_toRightOf="@id/txtWinPts"
+                android:layout_marginLeft="60dp"
+                android:visibility="invisible">
+            </TextView>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_below="@id/points"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            app:srcCompat="@drawable/resource_new"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNumTeams"
+            android:layout_below="@id/eventImage"
+            android:text="number of teams"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>
