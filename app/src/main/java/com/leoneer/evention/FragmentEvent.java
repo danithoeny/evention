@@ -94,7 +94,7 @@ public class FragmentEvent extends Fragment {
 
     public void showTeams() {
         Collections.sort(eventTeams);
-        if (eventTeams.get(eventTeams.size()-1).getTeamPoints() >= 0) {
+        if (eventTeams.get(eventTeams.size()-1).getTeamPoints() > 0) {
             Collections.reverse(eventTeams);
         }
 
